@@ -1,36 +1,52 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
-  # Executa em pushes direcionados ao branch padrão (main)
+  # Dispara em pushes para a branch main (após um merge de PR, por exemplo)
   push:
     branches: ["main"]
-  # Permite que você execute este workflow manualmente na aba Actions
+
+  # Dispara quando um Pull Request é aberto ou atualizado para a branch main
+  pull_request:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Define as permissões do GITHUB_TOKEN para permitir o deploy no GitHub Pages
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  pages: write # Necessário para o deploy
+  id-token: write # Necessário para o deploy
+  pull-requests: write # Opcional: para permitir que a action comente no PR
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Build Docker image
-        run: docker build -t image-gallery-generator .
-
-      - name: Generate static site
-        run: docker run --rm -v "$(pwd)/images:/app/images" -v "$(pwd)/pub:/app/pub" image-gallery-generator
-
+      - uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Build with a build tool (e.g., npm, yarn)
+        run: npm ci && npm run build # Substitua pelo seu comando de build.
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './pub' # Faz o upload do conteúdo da pasta 'pub'
+          # Upload a pasta de build (ex: dist, build, public)
+          path: './build'
 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    # Garante que o deploy SÓ aconteça em um push para a branch main,
+    # e não em Pull Requests.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

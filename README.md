@@ -70,6 +70,12 @@ Você pode escolher um dos dois métodos abaixo. **O método com Docker é o rec
 
 4. **Visualize o resultado:** Abra o arquivo `pub/index.html` no seu navegador para ver sua galeria!
 
+## 🤝 Como Contribuir
+
+Contribuições são muito bem-vindas! Se você tem ideias para novas funcionalidades, melhorias ou encontrou um bug, sinta-se à vontade para colaborar.
+
+Para garantir que o processo seja claro e organizado para todos, criamos um guia de contribuição. Por favor, leia o nosso **Guia de Colaboração** antes de começar.
+
 ## 📜 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
