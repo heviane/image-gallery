@@ -102,6 +102,6 @@ Agora que a conexão está feita, o processo para enviar atualizações é muito
 
 ### Próximos Passos
 
-Quando você se sentir confortável com este fluxo, o próximo passo é aprender a colaborar em equipe. Para isso, nosso projeto tem um **[Guia de Colaboração](CONTRIBUTING.md)** que ensina sobre Branches e Pull Requests.
+Quando você se sentir confortável com este fluxo, o próximo passo é aprender a colaborar em equipe. Para isso, nosso projeto tem um **[Guia de Colaboração](../CONTRIBUTING.md)** que ensina sobre Branches e Pull Requests.
 
 Parabéns por dar este passo importante na sua jornada como desenvolvedor(a)!
