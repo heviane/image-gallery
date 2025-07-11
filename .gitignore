@@ -1,0 +1,10 @@
+# Ignora o diretório de saída gerado pelo script.
+# Este diretório é um artefato de build e não deve ser versionado.
+/pub/
+
+# Arquivos de ambiente e cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos de ambiente virtual (se usados localmente)
+/venv/
