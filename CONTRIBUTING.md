@@ -7,6 +7,7 @@ Para garantir a qualidade do código e a estabilidade do ambiente de produção 
 ## Sumário
 
 - [Fluxo de Trabalho de Contribuição](#fluxo-de-trabalho-de-contribuição)
+- [Reportando Bugs e Sugerindo Funcionalidades](#reportando-bugs-e-sugerindo-funcionalidades)
 - [Configurando o Repositório (Para Administradores)](#configurando-o-repositório-para-administradores)
 
 ---
@@ -68,6 +69,18 @@ Outros desenvolvedores irão revisar seu código, deixar comentários e sugestõ
 Após a aprovação do PR e a passagem de todos os testes automáticos, um administrador irá fazer o "merge" das suas alterações na branch `main`.
 
 **Este merge na `main` é o gatilho que inicia o deploy automático para o GitHub Pages.** Em poucos minutos, suas alterações estarão no ar!
+
+---
+
+## Reportando Bugs e Sugerindo Funcionalidades
+
+Utilizamos as **Issues do GitHub** para rastrear bugs e novas funcionalidades.
+
+Antes de criar uma nova Issue:
+
+- **Verifique se já não existe uma Issue similar.** Se existir, participe da discussão em vez de criar uma duplicata.
+- Para **reportar um bug**, use o template "Relatório de Bug" e forneça o máximo de detalhes possível.
+- Para **sugerir uma funcionalidade**, use o template "Solicitação de Funcionalidade" e descreva claramente sua ideia e o problema que ela resolve.
 
 ---
 

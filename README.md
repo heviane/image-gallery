@@ -76,6 +76,8 @@ Contribuições são muito bem-vindas! Se você tem ideias para novas funcionali
 
 Para garantir que o processo seja claro e organizado para todos, criamos um guia de contribuição. Por favor, leia o nosso **[Guia de Colaboração](CONTRIBUTING.md)** antes de começar.
 
+> **É novo(a) no GitHub?** Se você está começando e quer aprender como compartilhar um projeto, confira nosso **[Guia para Iniciantes](./docs/Getting-Started-with-GitHub-Guide.md)**.
+
 ## 📜 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
