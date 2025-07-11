@@ -42,6 +42,7 @@ A estrutura de pastas deve ficar assim:
 ## Passo 3: Conteúdo ao Arquivo `deploy.yml`
 
 Segue um exemplo simples para realizar deploy automático no Github pages ao atualizar a branch `main`.
+
 Verifique e adapte as suas necessidades!
 
     ```yaml
