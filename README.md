@@ -74,7 +74,7 @@ Você pode escolher um dos dois métodos abaixo. **O método com Docker é o rec
 
 Contribuições são muito bem-vindas! Se você tem ideias para novas funcionalidades, melhorias ou encontrou um bug, sinta-se à vontade para colaborar.
 
-Para garantir que o processo seja claro e organizado para todos, criamos um guia de contribuição. Por favor, leia o nosso **Guia de Colaboração** antes de começar.
+Para garantir que o processo seja claro e organizado para todos, criamos um guia de contribuição. Por favor, leia o nosso **[Guia de Colaboração](CONTRIBUTING.md)** antes de começar.
 
 ## 📜 Licença
 
