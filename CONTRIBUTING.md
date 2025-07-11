@@ -79,8 +79,8 @@ Utilizamos as **Issues do GitHub** para rastrear bugs e novas funcionalidades.
 Antes de criar uma nova Issue:
 
 - **Verifique se já não existe uma Issue similar.** Se existir, participe da discussão em vez de criar uma duplicata.
-- Para **reportar um bug**, use o template "Relatório de Bug" e forneça o máximo de detalhes possível.
-- Para **sugerir uma funcionalidade**, use o template "Solicitação de Funcionalidade" e descreva claramente sua ideia e o problema que ela resolve.
+- Para **reportar um bug**, use o template **[Relatório de Bug](./.github/ISSUE_TEMPLATE/bug_report.md)** e forneça o máximo de detalhes possível.
+- Para **sugerir uma funcionalidade**, use o template **[Solicitação de Funcionalidade](./.github/ISSUE_TEMPLATE/feature_request.md)** e descreva claramente sua ideia e o problema que ela resolve.
 
 ---
 
