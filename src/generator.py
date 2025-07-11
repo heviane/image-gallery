@@ -1,4 +1,5 @@
 import shutil
+import os
 from pathlib import Path
 
 # --- Configuração ---
@@ -20,10 +21,18 @@ IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.webp']
 
 def generate_site():
     """Função principal que gera o site estático."""
-    # 1. Limpa e cria o diretório de saída 'pub' de forma segura
+    # 1. Garante que o diretório de saída 'pub' esteja limpo e exista.
     if OUTPUT_DIR.exists():
-        shutil.rmtree(OUTPUT_DIR)
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        # Limpa o conteúdo do diretório, mas não o diretório em si.
+        # Isso é crucial para a execução com Docker, pois '/app/pub' é um ponto de montagem.
+        for item in OUTPUT_DIR.iterdir():
+            if item.is_dir():
+                shutil.rmtree(item)
+            else:
+                item.unlink()
+    else:
+        # Se o diretório não existir (ex: primeira execução sem Docker), cria-o.
+        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     # 2. Copia o arquivo CSS para a raiz do diretório de saída
     shutil.copy(CSS_FILE, OUTPUT_DIR / CSS_FILE.name)
@@ -39,7 +48,7 @@ def generate_site():
 
     # 4. Percorre o diretório de imagens recursivamente
     # O primeiro item do walk é o próprio diretório raiz
-    for root_str, dirs, files in sorted(list(IMG_DIR.walk())):
+    for root_str, dirs, files in sorted(os.walk(IMG_DIR)):
         root = Path(root_str)
         
         # Ordena diretórios e arquivos alfabeticamente para consistência
