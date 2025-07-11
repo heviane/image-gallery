@@ -12,7 +12,7 @@ Um script Python que gera automaticamente um website estático, navegável e res
 * **Zero Dependências (com Docker):** O uso do Docker elimina a necessidade de instalar Python ou qualquer outra dependência na sua máquina.
 * **Leve e Rápido:** Por ser 100% estático, o site gerado é extremamente rápido e pode ser hospedado em qualquer lugar (GitHub Pages, Netlify, etc.).
 
-> **Quer publicar seu site online?** Confira nosso [**Guia de Deploy no GitHub Pages**](./DEPLOY_GUIDE.md).
+> **Quer publicar seu site online?** Confira nosso [**Guia de Deploy no GitHub Pages**](./docs/github/DEPLOY_GUIDE.md).
 
 ## 🚀 Como Utilizar
 
@@ -76,7 +76,7 @@ Contribuições são muito bem-vindas! Se você tem ideias para novas funcionali
 
 Para garantir que o processo seja claro e organizado para todos, criamos um guia de contribuição. Por favor, leia o nosso **[Guia de Colaboração](CONTRIBUTING.md)** antes de começar.
 
-> **É novo(a) no GitHub?** Se você está começando e quer aprender como compartilhar um projeto, confira nosso **[Guia para Iniciantes](./docs/Getting-Started-with-GitHub-Guide.md)**.
+> **É novo(a) no GitHub?** Se você está começando e quer aprender como compartilhar um projeto, confira nosso **[Guia para Iniciantes](./docs/github/getting-started-guide.md)**.
 
 ## 📜 Licença
 

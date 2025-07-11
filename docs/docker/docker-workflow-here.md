@@ -1,4 +1,4 @@
-# Entendendo o Fluxo de Trabalho com Docker
+# Entendendo o fluxo de trabalho com docker neste projeto
 
 Este documento explica como o Docker é utilizado neste projeto para gerar o site estático da galeria de imagens.
 
@@ -43,9 +43,9 @@ Com o conceito acima em mente, o ciclo de trabalho para atualizar a galeria se t
 
     Use este comando **apenas quando você alterar os arquivos de código-fonte** do projeto. Isso inclui:
 
-    * O script Python (`src/generator.py`)
-    * Os templates (`src/template.html`, `src/style.css`, etc.)
-    * O próprio `Dockerfile`
+  * O script Python (`src/generator.py`)
+  * Os templates (`src/template.html`, `src/style.css`, etc.)
+  * O próprio `Dockerfile`
 
 * **`docker run ...`**
     Use este comando **sempre que você quiser gerar o site**, principalmente após alterar apenas o conteúdo da pasta `images`.

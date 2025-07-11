@@ -87,7 +87,7 @@ Verifique e adapte as suas necessidades!
 
 ## Passo 4: Fazer o Commit e Verificar
 
-1. Adicione, faça o commit e envie os novos arquivos (`.github/workflows/deploy.yml` e `DEPLOY_GUIDE.md`) para o seu repositório no GitHub.
+1. Adicione, faça o commit e envie os novos arquivos (`.github/workflows/deploy.yml` e `DEPLOY_GUIDE.md`) para o seu repositório no GitHub:
 
     ```bash
     git add .
