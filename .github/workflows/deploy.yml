@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Executa em pushes direcionados ao branch padrão (main)
+  push:
+    branches: ["main"]
+  # Permite que você execute este workflow manualmente na aba Actions
+  workflow_dispatch:
+
+# Define as permissões do GITHUB_TOKEN para permitir o deploy no GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t image-gallery-generator .
+
+      - name: Generate static site
+        run: docker run --rm -v "$(pwd)/images:/app/images" -v "$(pwd)/pub:/app/pub" image-gallery-generator
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './pub' # Faz o upload do conteúdo da pasta 'pub'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
