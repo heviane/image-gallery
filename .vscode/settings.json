@@ -1,2 +1,8 @@
 {
+  "[python]": {
+    // Define o formatador padrão para arquivos Python, garantindo consistência.
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    // Formata o código automaticamente sempre que o arquivo é salvo.
+    "editor.formatOnSave": true
+  }
 }

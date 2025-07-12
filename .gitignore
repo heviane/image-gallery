@@ -12,3 +12,5 @@ __pycache__/
 # Ignore o diretório local do developer
 # Este diretório pode conter configurações específicas do desenvolvedor e não deve ser versionado.
 /local/
+
+/node_modules/

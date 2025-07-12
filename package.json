@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "A simple static image gallery application (HTML/CSS).",
   "scripts": {
-    "dev": "live-server --port=8080",
+    "dev": "live-server pub --port=8080",
+    "build": "python src/generator.py",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
