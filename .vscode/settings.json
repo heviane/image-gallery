@@ -4,5 +4,6 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
     // Formata o código automaticamente sempre que o arquivo é salvo.
     "editor.formatOnSave": true
-  }
+  },
+  "references.preferredLocation": "view"
 }
