@@ -17,7 +17,7 @@ FAVICON_FILE = SCRIPT_DIR / 'favicon.svg'          # Ícone para o navegador (fa
 # O diretório de saída agora é 'pub' na raiz do projeto, uma prática mais segura
 OUTPUT_DIR = PROJECT_ROOT / 'pub'
 
-IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.webp']
+IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg']
 
 def generate_site():
     """Função principal que gera o site estático."""
